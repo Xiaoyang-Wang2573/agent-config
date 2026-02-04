@@ -1,298 +1,191 @@
-# Contains Studio AI Agents
+# Agents（代理）
 
-A comprehensive collection of specialized AI agents designed to accelerate and enhance every aspect of rapid development. Each agent is an expert in their domain, ready to be invoked when their expertise is needed.
+> ⚠️ **支持的客户端**: Claude Code、Codex CLI、OpenCode
+>
+> Gemini CLI 不支持 Agents 功能。
 
-## 📥 Installation
+## 什么是 Agent
 
-1. **Download this repository:**
-   ```bash
-   git clone https://github.com/contains-studio/agents.git
-   ```
+Agent（代理）是具有特定角色和专业能力的 AI 助手。通过定义 Agent，你可以让 AI 以特定的身份和专业知识来处理任务。
 
-2. **Copy to your Claude Code agents directory:**
-   ```bash
-   cp -r agents/* ~/.claude/agents/
-   ```
-   
-   Or manually copy all the agent files to your `~/.claude/agents/` directory.
+例如：
+- **后端架构师** - 专注于 API 设计和系统架构
+- **前端开发者** - 专注于 UI 实现和用户体验
+- **代码审查员** - 专注于代码质量和最佳实践
 
-3. **Restart Claude Code** to load the new agents.
+## 文件格式
 
-## 🚀 Quick Start
-
-Agents are automatically available in Claude Code. Simply describe your task and the appropriate agent will be triggered. You can also explicitly request an agent by mentioning their name.
-
-📚 **Learn more:** [Claude Code Sub-Agents Documentation](https://docs.anthropic.com/en/docs/claude-code/sub-agents)
-
-### Example Usage
-- "Create a new app for tracking meditation habits" → `rapid-prototyper`
-- "What's trending on TikTok that we could build?" → `trend-researcher`
-- "Our app reviews are dropping, what's wrong?" → `feedback-synthesizer`
-- "Make this loading screen more fun" → `whimsy-injector`
-
-## 📁 Directory Structure
-
-Agents are organized by department for easy discovery:
-
-```
-contains-studio-agents/
-├── design/
-│   ├── brand-guardian.md
-│   ├── ui-designer.md
-│   ├── ux-researcher.md
-│   ├── visual-storyteller.md
-│   └── whimsy-injector.md
-├── engineering/
-│   ├── ai-engineer.md
-│   ├── backend-architect.md
-│   ├── devops-automator.md
-│   ├── frontend-developer.md
-│   ├── mobile-app-builder.md
-│   ├── rapid-prototyper.md
-│   └── test-writer-fixer.md
-├── marketing/
-│   ├── app-store-optimizer.md
-│   ├── content-creator.md
-│   ├── growth-hacker.md
-│   ├── instagram-curator.md
-│   ├── reddit-community-builder.md
-│   ├── tiktok-strategist.md
-│   └── twitter-engager.md
-├── product/
-│   ├── feedback-synthesizer.md
-│   ├── sprint-prioritizer.md
-│   └── trend-researcher.md
-├── project-management/
-│   ├── experiment-tracker.md
-│   ├── project-shipper.md
-│   └── studio-producer.md
-├── studio-operations/
-│   ├── analytics-reporter.md
-│   ├── finance-tracker.md
-│   ├── infrastructure-maintainer.md
-│   ├── legal-compliance-checker.md
-│   └── support-responder.md
-├── testing/
-│   ├── api-tester.md
-│   ├── performance-benchmarker.md
-│   ├── test-results-analyzer.md
-│   ├── tool-evaluator.md
-│   └── workflow-optimizer.md
-└── bonus/
-    ├── joker.md
-    └── studio-coach.md
-```
-
-## 📋 Complete Agent List
-
-### Engineering Department (`engineering/`)
-- **ai-engineer** - Integrate AI/ML features that actually ship
-- **backend-architect** - Design scalable APIs and server systems
-- **devops-automator** - Deploy continuously without breaking things
-- **frontend-developer** - Build blazing-fast user interfaces
-- **mobile-app-builder** - Create native iOS/Android experiences
-- **rapid-prototyper** - Build MVPs in days, not weeks
-- **test-writer-fixer** - Write tests that catch real bugs
-
-### Product Department (`product/`)
-- **feedback-synthesizer** - Transform complaints into features
-- **sprint-prioritizer** - Ship maximum value in 6 days
-- **trend-researcher** - Identify viral opportunities
-
-### Marketing Department (`marketing/`)
-- **app-store-optimizer** - Dominate app store search results
-- **content-creator** - Generate content across all platforms
-- **growth-hacker** - Find and exploit viral growth loops
-- **instagram-curator** - Master the visual content game
-- **reddit-community-builder** - Win Reddit without being banned
-- **tiktok-strategist** - Create shareable marketing moments
-- **twitter-engager** - Ride trends to viral engagement
-
-### Design Department (`design/`)
-- **brand-guardian** - Keep visual identity consistent everywhere
-- **ui-designer** - Design interfaces developers can actually build
-- **ux-researcher** - Turn user insights into product improvements
-- **visual-storyteller** - Create visuals that convert and share
-- **whimsy-injector** - Add delight to every interaction
-
-### Project Management (`project-management/`)
-- **experiment-tracker** - Data-driven feature validation
-- **project-shipper** - Launch products that don't crash
-- **studio-producer** - Keep teams shipping, not meeting
-
-### Studio Operations (`studio-operations/`)
-- **analytics-reporter** - Turn data into actionable insights
-- **finance-tracker** - Keep the studio profitable
-- **infrastructure-maintainer** - Scale without breaking the bank
-- **legal-compliance-checker** - Stay legal while moving fast
-- **support-responder** - Turn angry users into advocates
-
-### Testing & Benchmarking (`testing/`)
-- **api-tester** - Ensure APIs work under pressure
-- **performance-benchmarker** - Make everything faster
-- **test-results-analyzer** - Find patterns in test failures
-- **tool-evaluator** - Choose tools that actually help
-- **workflow-optimizer** - Eliminate workflow bottlenecks
-
-## 🎁 Bonus Agents
-- **studio-coach** - Rally the AI troops to excellence
-- **joker** - Lighten the mood with tech humor
-
-## 🎯 Proactive Agents
-
-Some agents trigger automatically in specific contexts:
-- **studio-coach** - When complex multi-agent tasks begin or agents need guidance
-- **test-writer-fixer** - After implementing features, fixing bugs, or modifying code
-- **whimsy-injector** - After UI/UX changes
-- **experiment-tracker** - When feature flags are added
-
-## 💡 Best Practices
-
-1. **Let agents work together** - Many tasks benefit from multiple agents
-2. **Be specific** - Clear task descriptions help agents perform better
-3. **Trust the expertise** - Agents are designed for their specific domains
-4. **Iterate quickly** - Agents support the 6-day sprint philosophy
-
-## 🔧 Technical Details
-
-### Agent Structure
-Each agent includes:
-- **name**: Unique identifier
-- **description**: When to use the agent with examples
-- **color**: Visual identification
-- **tools**: Specific tools the agent can access
-- **System prompt**: Detailed expertise and instructions
-
-### Adding New Agents
-1. Create a new `.md` file in the appropriate department folder
-2. Follow the existing format with YAML frontmatter
-3. Include 3-4 detailed usage examples
-4. Write comprehensive system prompt (500+ words)
-5. Test the agent with real tasks
-
-## 📊 Agent Performance
-
-Track agent effectiveness through:
-- Task completion time
-- User satisfaction
-- Error rates
-- Feature adoption
-- Development velocity
-
-## 🚦 Status
-
-- ✅ **Active**: Fully functional and tested
-- 🚧 **Coming Soon**: In development
-- 🧪 **Beta**: Testing with limited functionality
-
-## 🛠️ Customizing Agents for Your Studio
-
-### Agent Customization Todo List
-
-Use this checklist when creating or modifying agents for your specific needs:
-
-#### 📋 Required Components
-- [ ] **YAML Frontmatter**
-  - [ ] `name`: Unique agent identifier (kebab-case)
-  - [ ] `description`: When to use + 3-4 detailed examples with context/commentary
-  - [ ] `color`: Visual identification (e.g., blue, green, purple, indigo)
-  - [ ] `tools`: Specific tools the agent can access (Write, Read, MultiEdit, Bash, etc.)
-
-#### 📝 System Prompt Requirements (500+ words)
-- [ ] **Agent Identity**: Clear role definition and expertise area
-- [ ] **Core Responsibilities**: 5-8 specific primary duties
-- [ ] **Domain Expertise**: Technical skills and knowledge areas
-- [ ] **Studio Integration**: How agent fits into 6-day sprint workflow
-- [ ] **Best Practices**: Specific methodologies and approaches
-- [ ] **Constraints**: What the agent should/shouldn't do
-- [ ] **Success Metrics**: How to measure agent effectiveness
-
-#### 🎯 Required Examples by Agent Type
-
-**Engineering Agents** need examples for:
-- [ ] Feature implementation requests
-- [ ] Bug fixing scenarios
-- [ ] Code refactoring tasks
-- [ ] Architecture decisions
-
-**Design Agents** need examples for:
-- [ ] New UI component creation
-- [ ] Design system work
-- [ ] User experience problems
-- [ ] Visual identity tasks
-
-**Marketing Agents** need examples for:
-- [ ] Campaign creation requests
-- [ ] Platform-specific content needs
-- [ ] Growth opportunity identification
-- [ ] Brand positioning tasks
-
-**Product Agents** need examples for:
-- [ ] Feature prioritization decisions
-- [ ] User feedback analysis
-- [ ] Market research requests
-- [ ] Strategic planning needs
-
-**Operations Agents** need examples for:
-- [ ] Process optimization
-- [ ] Tool evaluation
-- [ ] Resource management
-- [ ] Performance analysis
-
-#### ✅ Testing & Validation Checklist
-- [ ] **Trigger Testing**: Agent activates correctly for intended use cases
-- [ ] **Tool Access**: Agent can use all specified tools properly
-- [ ] **Output Quality**: Responses are helpful and actionable
-- [ ] **Edge Cases**: Agent handles unexpected or complex scenarios
-- [ ] **Integration**: Works well with other agents in multi-agent workflows
-- [ ] **Performance**: Completes tasks within reasonable timeframes
-- [ ] **Documentation**: Examples accurately reflect real usage patterns
-
-#### 🔧 Agent File Structure Template
+Agent 文件使用 Markdown 格式，包含 YAML frontmatter：
 
 ```markdown
 ---
-name: your-agent-name
-description: Use this agent when [scenario]. This agent specializes in [expertise]. Examples:\n\n<example>\nContext: [situation]\nuser: "[user request]"\nassistant: "[response approach]"\n<commentary>\n[why this example matters]\n</commentary>\n</example>\n\n[3 more examples...]
-color: agent-color
-tools: Tool1, Tool2, Tool3
+name: agent-name
+description: 代理的简短描述，说明何时使用
+capabilities:
+  - 能力1
+  - 能力2
 ---
 
-You are a [role] who [primary function]. Your expertise spans [domains]. You understand that in 6-day sprints, [sprint constraint], so you [approach].
+# Agent 名称
 
-Your primary responsibilities:
-1. [Responsibility 1]
-2. [Responsibility 2]
-...
+详细的系统提示词，定义代理的角色、专业知识和行为方式。
 
-[Detailed system prompt content...]
+## 职责
+- 职责1
+- 职责2
 
-Your goal is to [ultimate objective]. You [key behavior traits]. Remember: [key philosophy for 6-day sprints].
+## 专业领域
+- 领域1
+- 领域2
 ```
 
-#### 📂 Department-Specific Guidelines
+## 各客户端使用方法
 
-**Engineering** (`engineering/`): Focus on implementation speed, code quality, testing
-**Design** (`design/`): Emphasize user experience, visual consistency, rapid iteration  
-**Marketing** (`marketing/`): Target viral potential, platform expertise, growth metrics
-**Product** (`product/`): Prioritize user value, data-driven decisions, market fit
-**Operations** (`studio-operations/`): Optimize processes, reduce friction, scale systems
-**Testing** (`testing/`): Ensure quality, find bottlenecks, validate performance
-**Project Management** (`project-management/`): Coordinate teams, ship on time, manage scope
+### Claude Code
 
-#### 🎨 Customizations
+**安装路径**：
+- 全局：`~/.claude/agents/`
+- 项目：`.claude/agents/`
 
-Modify these elements for your needs:
-- [ ] Adjust examples to reflect your product types
-- [ ] Add specific tools agents have access to
-- [ ] Modify success metrics for your KPIs
-- [ ] Update department structure if needed
-- [ ] Customize agent colors for your brand
+**安装方式**：
+```bash
+# Linux/macOS
+cp -r agents/* ~/.claude/agents/
 
-## 🤝 Contributing
+# Windows (PowerShell)
+Copy-Item -Recurse agents\* $env:USERPROFILE\.claude\agents\
+```
 
-To improve existing agents or suggest new ones:
-1. Use the customization checklist above
-2. Test thoroughly with real projects
-3. Document performance improvements
-4. Share successful patterns with the community
+**使用方式**：
+- 在对话中使用 `/agents` 查看可用代理
+- Claude 会根据任务自动选择合适的代理
+- 也可以手动指定使用某个代理
+
+**特点**：
+- 支持子目录分类（如 `agents/engineering/`, `agents/design/`）
+- 支持 YAML frontmatter 定义元数据
+
+---
+
+### Codex CLI
+
+**安装路径**：
+- 全局：`~/.codex/AGENTS.md`
+- 项目：项目根目录的 `AGENTS.md`
+
+**安装方式**：
+
+Codex CLI 使用单一的 `AGENTS.md` 文件，需要将多个 agent 内容合并：
+
+```bash
+# 创建或追加到 AGENTS.md
+cat agents/**/*.md >> ~/.codex/AGENTS.md
+
+# 或手动编辑 AGENTS.md，将需要的 agent 内容复制进去
+```
+
+**文件格式**：
+```markdown
+# AGENTS.md
+
+## 工作约定
+- 约定1
+- 约定2
+
+## 代码风格
+- 风格1
+- 风格2
+```
+
+**特点**：
+- 必须使用 `AGENTS.md` 文件名（大写）
+- 支持 `AGENTS.override.md` 用于临时覆盖
+- 文件大小限制：默认 32 KiB
+
+---
+
+### OpenCode
+
+**安装路径**：
+- 全局：`~/.config/opencode/agents/`
+- 项目：`.opencode/agents/`
+
+**安装方式**：
+```bash
+# Linux/macOS
+cp -r agents/* ~/.config/opencode/agents/
+
+# Windows (PowerShell)
+Copy-Item -Recurse agents\* $env:APPDATA\opencode\agents\
+```
+
+**使用方式**：
+- 使用 Tab 键切换主代理
+- 使用 `@agent-name` 调用特定代理
+- 运行 `opencode agent create` 交互式创建代理
+
+**特点**：
+- 文件名即为代理标识（如 `review.md` 创建 `review` 代理）
+- 支持 YAML frontmatter 配置
+
+---
+
+### Gemini CLI
+
+❌ **不支持** - Gemini CLI 目前不支持 Agents 功能。
+
+## 示例 Agent
+
+```markdown
+---
+name: code-reviewer
+description: 代码审查专家，专注于代码质量、安全性和最佳实践
+capabilities:
+  - 代码审查
+  - 安全漏洞检测
+  - 性能优化建议
+---
+
+# 代码审查专家
+
+你是一位经验丰富的代码审查专家，专注于提高代码质量和团队协作效率。
+
+## 职责
+
+- 审查代码变更，确保符合团队规范
+- 识别潜在的 bug 和安全漏洞
+- 提供建设性的改进建议
+- 确保代码可读性和可维护性
+
+## 审查重点
+
+1. **代码正确性** - 逻辑是否正确，边界条件是否处理
+2. **安全性** - 是否存在注入、XSS 等安全风险
+3. **性能** - 是否有明显的性能问题
+4. **可读性** - 命名是否清晰，结构是否合理
+5. **测试覆盖** - 是否有足够的测试
+
+## 反馈风格
+
+- 具体指出问题所在的代码行
+- 解释为什么这是一个问题
+- 提供具体的改进建议
+- 区分"必须修改"和"建议修改"
+```
+
+## 目录组织建议
+
+```
+agents/
+├── engineering/          # 工程相关
+│   ├── backend.md
+│   ├── frontend.md
+│   └── devops.md
+├── design/              # 设计相关
+│   ├── ui-designer.md
+│   └── ux-researcher.md
+├── review/              # 审查相关
+│   ├── code-reviewer.md
+│   └── security-auditor.md
+└── README.md
+```
